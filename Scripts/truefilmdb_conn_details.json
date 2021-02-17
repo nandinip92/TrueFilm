@@ -1,0 +1,9 @@
+{
+  "true_film_db" :
+   {
+    "host":"localhost",
+    "username":"postgres",
+    "password":"Nandini63",
+    "port" : 5432
+  }
+}
