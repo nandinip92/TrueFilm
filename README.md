@@ -174,6 +174,6 @@ I have attached a Jupiter Notebook with SQL Queries in **`sql_queries.ipynb`**
 
 **`TrueFilmDB_TablesStructure`** - This book has all table schemas created for this project in Postgres DB
 
-**Note:** Wikipedia dump is processed `LoadTopMovies.py` but it is not stored in Postgres.
+**Note:** Wikipedia dump is processed in `LoadTopMovies.py` but it is not stored in Postgres.
 
 Jupiter notebooks can be installed from [here](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) or can be directly viewed on GitHub.
