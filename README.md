@@ -110,7 +110,7 @@ TrueFilmProject> python Scripts/LoadTopMovies.py
 ```
 
 ## Why tools were chosen
-<ins>**Pandas:**</ins>
+**\***<ins>**Pandas:**</ins>
 I have used pandas python library in `Srcipts/StagingData.py`.
 This is used to process data from `movies_metadata.csv`, `links.csv` & `links_small.csv`. Choice of using pandas for it is because of the following reasons :
 1. There were no aggregation operations necessary while processing them
@@ -122,7 +122,7 @@ Sample bad records:
 <img src="./ReadmeImages/BadRecords.jpg">
 
 
-<ins>**Pyspark:**</ins>
+**\***<ins>**Pyspark:**</ins>
 I have used pyspark for processing data from `ratings.csv` and `ratings_small.csv`. This was primarily because of the type of data. A user can give ratings to multiple movies, this creates a Many -to- Many relationship between Movies and Ratings. We need to **aggregate** all user ratings for a movie and  calculate a rating we can use in tables.
 Pyspark was also used for processing information from Wikipedia xml files.  This was because of **huge size** of the XML file I had to process.
 To make it generic and extensible, creating final table with top 1000 movies was also done in pyspark.
@@ -135,7 +135,7 @@ Both of above operations like merging or grouping of data require parallelizatio
 
 `StageMovieRatings.py` and `LoadTopMovies.py` both uses pyspark for processing data.
 
-<ins>**Postgres:**</ins>
+**\***<ins>**Postgres:**</ins>
 Staged KAGGLE datasets into Postgres Database as this data is structured and some kind of relationships can be formed between them. Staging data will make easy to backtrack if any data mismatch occurs during analysis.
 
 ### Overview of Scripts used
