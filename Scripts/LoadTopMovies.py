@@ -118,7 +118,6 @@ class LoadTopMovies:
             os.mkdir(output_dir)
         file_name = 'top_movies.csv'
 
-
         top_movies_file = os.path.join(output_dir, file_name)
 
         final_df.to_csv(top_movies_file, sep=",", index=False, encoding="utf-8")
