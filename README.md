@@ -110,19 +110,19 @@ TrueFilmProject> python Scripts/LoadTopMovies.py
 ```
 
 ## Why tools were chosen
-Pandas Usage :
+<ins>**Pandas:**</ins>
 I have used pandas python library in `Srcipts/StagingData.py`.
 This is used to process data from `movies_metadata.csv`, `links.csv` & `links_small.csv`. Choice of using pandas for it is because of the following reasons :
 1. There were no aggregation operations necessary while processing them
 2. Identifying bad records is simpler using pandas
 3. These file sizes were manageable for simple processing in pandas
 
-**NOTE** Bad Records from csv files are the ones with misplaced column values.
+**NOTE:** Bad Records from csv files are the ones with misplaced column values.
 Sample bad records:
 <img src="./ReadmeImages/BadRecords.jpg">
 
 
-Pyspark:
+<ins>**Pyspark:**</ins>
 I have used pyspark for processing data from `ratings.csv` and `ratings_small.csv`. This was primarily because of the type of data. A user can give ratings to multiple movies, this creates a Many -to- Many relationship between Movies and Ratings. We need to **aggregate** all user ratings for a movie and  calculate a rating we can use in tables.
 Pyspark was also used for processing information from Wikipedia xml files.  This was because of **huge size** of the XML file I had to process.
 To make it generic and extensible, creating final table with top 1000 movies was also done in pyspark.
@@ -173,5 +173,6 @@ I have attached a Jupiter Notebook with SQL Queries in **`sql_queries.ipynb`**
 
 **`TrueFilmDB_TablesStructure`** - This book has all table schemas created for this project in Postgres DB
 
+**Note:** Wikipedia dump is processed `LoadTopMovies.py` but it is not stored in Postgres.
 
 Jupiter notebooks can be installed from [here](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) or can be directly viewed on GitHub.
