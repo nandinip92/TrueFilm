@@ -171,6 +171,7 @@ At different stages, I had executed some SQL queries on Tables and did some manu
 ## How to query data
 I have attached a Jupiter Notebook with SQL Queries in **`sql_queries.ipynb`**
 
-**`TrueFilmDB_TablesStructure`** - This book has all table structures created for this project in Postgres DB
+**`TrueFilmDB_TablesStructure`** - This book has all table schemas created for this project in Postgres DB
+
 
 Jupiter notebooks can be installed from [here](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) or can be directly viewed on GitHub.
