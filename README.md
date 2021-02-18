@@ -132,9 +132,10 @@ PySpark was choosen to process these because of following reasons:
 2. Processing **huge size** files
 
 Both of above operations like merging or grouping of data require parallelization and distributed computing. These operations are very slow and quite expensive and become difficult to handle with a Pandas dataframe, which does not support parallel processing.
+
 `StageMovieRatings.py` and `LoadTopMovies.py` both uses pyspark for processing data.
 
-3. Postgres:
+<ins>**Postgres:**</ins>
 Staged KAGGLE datasets into Postgres Database as this data is structured and some kind of relationships can be formed between them. Staging data will make easy to backtrack if any data mismatch occurs during analysis.
 
 ### Overview of Scripts used
