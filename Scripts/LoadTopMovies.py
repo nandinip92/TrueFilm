@@ -116,6 +116,8 @@ class LoadTopMovies:
         output_dir = './Scripts/ProcessedData'
         if not os.path.exists(output_dir):
             os.mkdir(output_dir)
+        file_name = 'top_movies.csv'
+
 
         top_movies_file = os.path.join(output_dir, file_name)
 
