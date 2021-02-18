@@ -61,7 +61,7 @@ You need to specify : `username`\*, `password`\*, `host`\* & `port`\* details in
 #### PySpark Configuration
 Place downloaded Jar-Files **Spark-XML package Jar file** & **PostgreSQL JDBC Driver** in a folder.
 Override jar file entries in `CreateSparkSession.py` file with above paths.
-```python:
+```python
 jars = [
                 "Scripts/JARS/postgresql-42.2.18.jar",
                 "Scripts/JARS/spark-xml_2.11-0.11.0.jar",
@@ -70,14 +70,14 @@ jars = [
 **NOTE** If using same version as above, jar files are included in project and paths need not change.
 
 If using distributed systems, you can modify Spark session builder in `CreateSparkSession.py` accordingly.
-```python:
-            spark = SparkSession.builder.master("local").config(conf=conf).getOrCreate()
+```python
+          spark = SparkSession.builder.master("local").config(conf=conf).getOrCreate()
 ```
 ### RUN
 Following commands need to be run from `TrueFilmProject` folder only.
 * Step-1 :
 Run following command :
-```shell:
+```shell
 TrueFilmProject> python Scripts/CreateTables.py
 ```
 This will connect to your postgres database and creates `true_film_db database`\* inside it.
@@ -88,7 +88,7 @@ After creating true_film_db\*\* it will create required tables for this project.
 
 * Step-2 :
 Run following command :
-```shell:
+```shell
 TrueFilmProject> python Scripts/StagingData.py
 ```
 This command will process input data from `movies_metadata.csv`, `links.csv` & `links_small.csv`.
@@ -97,7 +97,7 @@ Loads cleaned data into `true_film_db.movies_metadata` and `true_film_db.movie_l
 
 * Step-3 :
 Run following command :
-```shell:
+```shell
 TrueFilmProject> python Scripts/StageMovieRatings.py
 ```
 This will process input data from `ratings.csv` and `ratings_small.csv`.
@@ -105,7 +105,7 @@ Cleaned and aggregated data from input files is loaded directly into `true_film_
 
 * Step-4 :
 Run following command :
-```shell:
+```shell
 TrueFilmProject> python Scripts/LoadTopMovies.py
 ```
 
