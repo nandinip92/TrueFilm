@@ -149,6 +149,7 @@ Staged KAGGLE datasets into Postgres Database as this data is structured and som
 #### Other files in Scripts
 * `PostgresCredentials.cfg` - PostgresDB connection details
 * `truefilmdb_conn_details.json` - `true_film_db` connection details
+* `sql_queries.py` - contains SQL queries for drop, create and copy statements for true_film_db tables
 * `TruefilmdbColDetails.py` - Required columns and Datatypes from the Datasets are specified in this file
 *  `ConnectToDatabase.py` - This will cerate a connection to PostgresDB
 * `CreateSparkSession.py` - This will load required JARS and create spark session.
